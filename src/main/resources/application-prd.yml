@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+#  redis:
+#    host: ${REDISHOST}
+#    port: ${REDISPORT}
+#    password: ${REDISPASSWORD}
+#    username: ${REDISUSER}
+#    database: 0
+#    lettuce:
+#      pool:
+#        max-active: 5
+#        max-idle: 2
+#        min-idle: 1
+#      shutdown-timeout: 500
